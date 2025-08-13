@@ -1,0 +1,55 @@
+{
+  "name": "Jet Taxi - Professional Taxi Service",
+  "short_name": "JetTaxi",
+  "description": "Professional taxi service in Famagusta, Cyprus. Available 24/7 for all your transportation needs.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f59e0b",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "tr",
+  "categories": ["transportation", "travel", "business"],
+  "icons": [
+    {
+      "src": "/images/JetTaxi.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/JetTaxi.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Now",
+      "short_name": "Book",
+      "description": "Book a taxi ride",
+      "url": "/?action=book",
+      "icons": [
+        {
+          "src": "/images/JetTaxi.jpg",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Call Us",
+      "short_name": "Call",
+      "description": "Call Jet Taxi",
+      "url": "tel:+905338806808"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/JetTaxi.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ]
+}
