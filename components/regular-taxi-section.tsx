@@ -98,30 +98,37 @@ export default function RegularTaxiSection() {
   const mercedesGallery = [
     {
       id: 1,
-      src: "/images/taxi-exterior-day.jpg",
-      alt: "Mercedes Taxi - Exterior Day View",
-      caption: t("taxi.mercedesTitle"),
-      category: "Standard Taxi"
+      src: "/images/mercedes-eclass-main.jpg",
+      alt: "Mercedes E-Class Premium - Grand Sapphire Resort",
+      caption: "Mercedes E-Class Premium - Grand Sapphire Resort",
+      category: "Premium Taxi"
     },
     {
       id: 2,
-      src: "/images/taxi-interior-night.jpg",
-      alt: "Mercedes Taxi - Interior Night View",
-      caption: "Lüks İç Mekan Deneyimi",
+      src: "/images/taxi-exterior-day.jpg",
+      alt: "Mercedes Taxi - Professional Service Exterior",
+      caption: "Profesyonel Mercedes Taksi Hizmeti",
       category: "Standard Taxi"
     },
     {
       id: 3,
-      src: "/images/taxi-exterior-night.jpg",
-      alt: "Mercedes Taxi - Night Exterior",
-      caption: "Profesyonel Gece Hizmeti",
+      src: "/images/taxi-interior-night.jpg",
+      alt: "Mercedes Taxi - Luxury Interior Night View",
+      caption: "Lüks İç Mekan Deneyimi - Gece",
       category: "Standard Taxi"
     },
     {
       id: 4,
+      src: "/images/taxi-exterior-night.jpg",
+      alt: "Mercedes Taxi - Night Exterior Service",
+      caption: "Profesyonel Gece Hizmeti",
+      category: "Standard Taxi"
+    },
+    {
+      id: 5,
       src: "/images/taxi-interior-red.jpg",
-      alt: "Mercedes Taxi - Red Interior Lighting",
-      caption: "Premium İç Mekan Konforu",
+      alt: "Mercedes Taxi - Premium Red Interior Lighting",
+      caption: "Premium İç Mekan Konforu - Kırmızı Aydınlatma",
       category: "Standard Taxi"
     },
   ]
@@ -162,7 +169,7 @@ export default function RegularTaxiSection() {
     },
     {
       id: 2,
-      src: "/images/taxi-exterior-day.jpg", // Main image for the card
+      src: "/images/mercedes-eclass-main.jpg", // Updated main image for the card
       alt: "Mercedes Taxi - Professional Service",
       title: t("taxi.mercedesTitle"),
       features: [
