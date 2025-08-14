@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/firebase'
 import { collection, addDoc, serverTimestamp, query, where, getDocs } from 'firebase/firestore'
 import { z } from 'zod'
+import { bookingRateLimiter } from '@/lib/rate-limiter'
 
 // Rezervasyon validation schema
 const bookingSchema = z.object({
@@ -82,6 +83,35 @@ function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: numbe
 // POST: Yeni rezervasyon oluştur
 export async function POST(request: NextRequest) {
   try {
+    // Rate limiting
+    const clientIP = request.headers.get('x-forwarded-for') || 
+                    request.headers.get('x-real-ip') || 
+                    'unknown'
+    
+    if (!bookingRateLimiter.isAllowed(clientIP)) {
+      const remaining = bookingRateLimiter.getRemaining(clientIP)
+      const resetTime = bookingRateLimiter.getResetTime(clientIP)
+      
+      return NextResponse.json(
+        { 
+          success: false,
+          error: 'Rate limit exceeded',
+          message: 'Çok fazla rezervasyon yapmaya çalıştınız. Lütfen daha sonra tekrar deneyin.',
+          remaining,
+          resetTime: new Date(resetTime).toISOString()
+        },
+        { 
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': '10',
+            'X-RateLimit-Remaining': remaining.toString(),
+            'X-RateLimit-Reset': resetTime.toString(),
+            'Retry-After': Math.ceil((resetTime - Date.now()) / 1000).toString()
+          }
+        }
+      )
+    }
+
     const body = await request.json()
     
     // Validation

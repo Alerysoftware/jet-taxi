@@ -19,67 +19,78 @@ export default function RegularTaxiSection() {
       id: 1,
       src: "/images/mercedes-eclass-main.jpg",
       alt: "Mercedes E-Class Premium at Grand Sapphire",
-      title: "Mercedes E-Class Premium - Grand Sapphire",
+      caption: "Mercedes E-Class Premium - Grand Sapphire",
+      category: "Premium Taxi"
     },
     {
       id: 2,
       src: "/images/eclass-grand-sapphire-night.jpg",
       alt: "Mercedes E-Class at Grand Sapphire Night",
-      title: "Mercedes E-Class - Grand Sapphire Gece Hizmeti",
+      caption: "Mercedes E-Class - Grand Sapphire Gece Hizmeti",
+      category: "Premium Taxi"
     },
     {
       id: 3,
       src: "/images/eclass-sunset-road.jpg",
       alt: "Mercedes E-Class Sunset Road",
-      title: "Mercedes E-Class - Gün Batımı Manzarası",
+      caption: "Mercedes E-Class - Gün Batımı Manzarası",
+      category: "Premium Taxi"
     },
     {
       id: 4,
       src: "/images/eclass-classical-building.jpg",
       alt: "Mercedes E-Class at Classical Building",
-      title: "Mercedes E-Class - Klasik Mimari",
+      caption: "Mercedes E-Class - Klasik Mimari",
+      category: "Premium Taxi"
     },
     {
       id: 5,
       src: "/images/eclass-grand-sapphire-smoke.jpg",
       alt: "Mercedes E-Class Grand Sapphire Dramatic",
-      title: "Mercedes E-Class - Grand Sapphire Dramatik",
+      caption: "Mercedes E-Class - Grand Sapphire Dramatik",
+      category: "Premium Taxi"
     },
     {
       id: 6,
       src: "/images/eclass-shopping-center.jpg",
       alt: "Mercedes E-Class at Shopping Center",
-      title: "Mercedes E-Class - Alışveriş Merkezi",
+      caption: "Mercedes E-Class - Alışveriş Merkezi",
+      category: "Premium Taxi"
     },
     {
       id: 7,
       src: "/images/eclass-grand-sapphire-front.jpg",
       alt: "Mercedes E-Class Grand Sapphire Front",
-      title: "Mercedes E-Class - Grand Sapphire Ön Görünüm",
+      caption: "Mercedes E-Class - Grand Sapphire Ön Görünüm",
+      category: "Premium Taxi"
     },
     {
       id: 8,
       src: "/images/eclass-classical-columns.jpg",
       alt: "Mercedes E-Class Classical Columns",
-      title: "Mercedes E-Class - Klasik Sütunlar",
+      caption: "Mercedes E-Class - Klasik Sütunlar",
+      category: "Premium Taxi"
     },
     {
       id: 9,
       src: "/images/eclass-sunset-airport.jpg",
       alt: "Mercedes E-Class Sunset Airport",
-      title: "Mercedes E-Class - Havalimanı Gün Batımı",
+      caption: "Mercedes E-Class - Havalimanı Gün Batımı",
+      category: "Premium Taxi"
     },
     {
       id: 10,
       src: "/images/eclass-luxury-entrance.jpg",
       alt: "Mercedes E-Class Luxury Entrance",
-      title: "Mercedes E-Class - Lüks Giriş",
+      caption: "Mercedes E-Class - Lüks Giriş",
+      category: "Premium Taxi"
     },
     {
       id: 11,
       src: "/images/eclass-modern-building.jpg",
       alt: "Mercedes E-Class Modern Building",
-      title: "Mercedes E-Class - Modern Bina",
+      caption: "Mercedes E-Class - Modern Bina",
+      category: "Premium Taxi"
     },
   ]
 
@@ -89,25 +100,29 @@ export default function RegularTaxiSection() {
       id: 1,
       src: "/images/taxi-exterior-day.jpg",
       alt: "Mercedes Taxi - Exterior Day View",
-      title: t("taxi.mercedesTitle"),
+      caption: t("taxi.mercedesTitle"),
+      category: "Standard Taxi"
     },
     {
       id: 2,
       src: "/images/taxi-interior-night.jpg",
       alt: "Mercedes Taxi - Interior Night View",
-      title: "Lüks İç Mekan Deneyimi",
+      caption: "Lüks İç Mekan Deneyimi",
+      category: "Standard Taxi"
     },
     {
       id: 3,
       src: "/images/taxi-exterior-night.jpg",
       alt: "Mercedes Taxi - Night Exterior",
-      title: "Profesyonel Gece Hizmeti",
+      caption: "Profesyonel Gece Hizmeti",
+      category: "Standard Taxi"
     },
     {
       id: 4,
       src: "/images/taxi-interior-red.jpg",
       alt: "Mercedes Taxi - Red Interior Lighting",
-      title: "Premium İç Mekan Konforu",
+      caption: "Premium İç Mekan Konforu",
+      category: "Standard Taxi"
     },
   ]
 
@@ -117,13 +132,15 @@ export default function RegularTaxiSection() {
       id: 1,
       src: "/images/mercedes-eclass-sunset-construction.jpg",
       alt: "Mercedes E-Class TLP 959 - Sunset Construction Site",
-      title: "Mercedes E-Class - Modern Kalkınma Bölgesi",
+      caption: "Mercedes E-Class - Modern Kalkınma Bölgesi",
+      category: "Premium Taxi"
     },
     {
       id: 2,
       src: "/images/mercedes-eclass-sunset-rear.jpg",
       alt: "Mercedes E-Class TLP 959 - Sunset Rear View",
-      title: "Mercedes E-Class - Gün Batımı Arka Görünüm",
+      caption: "Mercedes E-Class - Gün Batımı Arka Görünüm",
+      category: "Premium Taxi"
     },
   ]
 
@@ -255,12 +272,14 @@ export default function RegularTaxiSection() {
       </div>
 
       {/* Photo Gallery Modal - for all Mercedes taxis */}
-      <PhotoGalleryModal
-        photos={currentGallery}
-        isOpen={isGalleryOpen}
-        onClose={() => setIsGalleryOpen(false)}
-        initialPhotoIndex={selectedPhotoIndex}
-      />
+      {isGalleryOpen && (
+        <PhotoGalleryModal
+          images={currentGallery}
+          isOpen={isGalleryOpen}
+          onClose={() => setIsGalleryOpen(false)}
+          initialIndex={selectedPhotoIndex}
+        />
+      )}
     </div>
   )
 }

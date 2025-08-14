@@ -18,7 +18,7 @@ export default function Header() {
       <div className="container mx-auto px-4 md:px-6 flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold tracking-wider text-yellow-500">JET TAXI</span>
+            <span className="text-xl font-bold tracking-wider text-yellow-500">ELITE TAXI</span>
           </Link>
         </div>
 

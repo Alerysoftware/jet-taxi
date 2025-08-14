@@ -13,18 +13,18 @@ import GoogleAnalytics from "@/components/analytics"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Jet Taxi - İskele, Famagusta",
-  description: "Professional taxi service in Famagusta. Available 24/7 for all your transportation needs. Luxury Mercedes-Benz fleet, airport transfers, city tours.",
-  keywords: "taxi, famagusta, iskele, airport transfer, luxury taxi, mercedes benz, cyprus taxi, 24/7 taxi",
-  authors: [{ name: "Jet Taxi Team" }],
-  creator: "Jet Taxi",
-  publisher: "Jet Taxi",
+  title: "Elite Taxi - İskele, Famagusta | Professional Taxi Service",
+  description: "Professional taxi service in Famagusta, Cyprus. Available 24/7 for all your transportation needs. Luxury Mercedes-Benz fleet, airport transfers, city tours.",
+  keywords: "taxi, famagusta, iskele, airport transfer, luxury taxi, mercedes benz, cyprus taxi, 24/7 taxi, vip taxi, airport pickup",
+  authors: [{ name: "Elite Taxi Team" }],
+  creator: "Elite Taxi",
+  publisher: "Elite Taxi",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://jettaxi.com'),
+  metadataBase: new URL('https://elitetaxi.com'),
   alternates: {
     canonical: '/',
     languages: {
@@ -37,26 +37,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    url: 'https://jettaxi.com',
-    siteName: 'Jet Taxi',
-    title: 'Jet Taxi - Professional Taxi Service in Famagusta',
+    url: 'https://elitetaxi.com',
+    siteName: 'Elite Taxi',
+    title: 'Elite Taxi - Professional Taxi Service in Famagusta',
     description: 'Luxury Mercedes-Benz taxi service in Famagusta. 24/7 airport transfers, city tours, and premium transportation.',
     images: [
       {
         url: '/images/JetTaxi.jpg',
         width: 1200,
         height: 1600,
-        alt: 'Jet Taxi Mercedes-Benz',
+        alt: 'Elite Taxi Mercedes-Benz',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Jet Taxi - Professional Taxi Service in Famagusta',
+    title: 'Elite Taxi - Professional Taxi Service in Famagusta',
     description: 'Luxury Mercedes-Benz taxi service in Famagusta. 24/7 airport transfers, city tours, and premium transportation.',
     images: ['/images/JetTaxi.jpg'],
-    creator: '@jettaxi',
-    site: '@jettaxi',
+    creator: '@elitetaxi',
+    site: '@elitetaxi',
   },
   robots: {
     index: true,
@@ -70,12 +70,12 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+    yahoo: process.env.NEXT_PUBLIC_YAHOO_VERIFICATION,
   },
   generator: 'Next.js 15',
-  applicationName: 'Jet Taxi',
+  applicationName: 'Elite Taxi',
   referrer: 'origin-when-cross-origin',
   colorScheme: 'light dark',
   themeColor: [
@@ -93,13 +93,13 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Jet Taxi',
+    title: 'Elite Taxi',
   },
   other: {
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'Jet Taxi',
+    'apple-mobile-web-app-title': 'Elite Taxi',
     'msapplication-TileColor': '#f59e0b',
     'msapplication-config': '/browserconfig.xml',
   },
@@ -112,6 +112,50 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        
+        {/* DNS Prefetch for performance */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "Elite Taxi",
+              "description": "Professional taxi service in Famagusta, Cyprus",
+              "url": "https://elitetaxi.com",
+              "telephone": "+905338806808",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "İskele",
+                "addressRegion": "Gazimağusa",
+                "addressCountry": "CY"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "35.3411",
+                "longitude": "33.9197"
+              },
+              "openingHours": "Mo-Su 00:00-23:59",
+              "priceRange": "$$",
+              "currenciesAccepted": "EUR, TRY, USD",
+              "paymentAccepted": "Cash, Credit Card",
+              "serviceType": "Taxi Service",
+              "areaServed": "Famagusta, Cyprus"
+            })
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <ErrorBoundary>
           <LanguageProvider>

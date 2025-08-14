@@ -1,4 +1,4 @@
-name: Deploy Jet Taxi
+name: Deploy Elite Taxi
 
 on:
   push:

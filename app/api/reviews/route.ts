@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/firebase'
 import { collection, getDocs, query, where, orderBy, addDoc, serverTimestamp } from 'firebase/firestore'
+import { reviewRateLimiter } from '@/lib/rate-limiter'
+import { logger } from '@/lib/logger'
 
 // Spam filtreleme fonksiyonu
 function analyzeComment(text: string, name: string): {
@@ -172,6 +174,8 @@ function analyzeComment(text: string, name: string): {
 
 // GET: Yorumları getir
 export async function GET(request: NextRequest) {
+  const startTime = Date.now()
+  
   try {
     const { searchParams } = new URL(request.url)
     const showAll = searchParams.get('all') === 'true'
@@ -195,8 +199,14 @@ export async function GET(request: NextRequest) {
       ...doc.data()
     }))
 
+    const duration = Date.now() - startTime
+    logger.logPerformance('Fetch reviews', duration, { count: reviews.length, showAll })
+    
     return NextResponse.json({ reviews })
   } catch (error) {
+    const duration = Date.now() - startTime
+    logger.logError(error as Error, { duration })
+    
     return NextResponse.json(
       { error: 'Failed to fetch reviews' },
       { status: 500 }
@@ -206,11 +216,44 @@ export async function GET(request: NextRequest) {
 
 // POST: Yeni yorum ekle
 export async function POST(request: NextRequest) {
+  const startTime = Date.now()
+  
   try {
+    // Rate limiting
+    const clientIP = request.headers.get('x-forwarded-for') || 
+                    request.headers.get('x-real-ip') || 
+                    'unknown'
+    
+    if (!reviewRateLimiter.isAllowed(clientIP)) {
+      const remaining = reviewRateLimiter.getRemaining(clientIP)
+      const resetTime = reviewRateLimiter.getResetTime(clientIP)
+      
+      logger.warn('Rate limit exceeded for reviews', { clientIP, remaining, resetTime })
+      
+      return NextResponse.json(
+        { 
+          error: 'Rate limit exceeded',
+          message: 'Çok fazla yorum gönderdiniz. Lütfen daha sonra tekrar deneyin.',
+          remaining,
+          resetTime: new Date(resetTime).toISOString()
+        },
+        { 
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': '5',
+            'X-RateLimit-Remaining': remaining.toString(),
+            'X-RateLimit-Reset': resetTime.toString(),
+            'Retry-After': Math.ceil((resetTime - Date.now()) / 1000).toString()
+          }
+        }
+      )
+    }
+
     const body = await request.json()
     const { name, text, rating } = body
 
     if (!name || !text || !rating) {
+      logger.warn('Missing required fields for review', { body })
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -218,6 +261,7 @@ export async function POST(request: NextRequest) {
     }
 
     if (rating < 1 || rating > 5) {
+      logger.warn('Invalid rating value', { rating })
       return NextResponse.json(
         { error: 'Rating must be between 1 and 5' },
         { status: 400 }
@@ -259,6 +303,14 @@ export async function POST(request: NextRequest) {
       spamReasons: spamAnalysis.reasons
     })
 
+    const duration = Date.now() - startTime
+    logger.info('Review added successfully', { 
+      reviewId: docRef.id, 
+      isSpam: spamAnalysis.isSpam, 
+      spamScore: spamAnalysis.spamScore,
+      duration 
+    })
+
     return NextResponse.json({ 
       success: true, 
       id: docRef.id,
@@ -267,6 +319,9 @@ export async function POST(request: NextRequest) {
       reasons: spamAnalysis.reasons // Spam sebeplerini de döndür
     })
   } catch (error) {
+    const duration = Date.now() - startTime
+    logger.logError(error as Error, { duration })
+    
     return NextResponse.json(
       { error: 'Failed to add review' },
       { status: 500 }

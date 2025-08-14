@@ -12,7 +12,7 @@ export default function HeroSection() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Jet Taxi",
+    "name": "Elite Taxi",
     "description": "Professional taxi service in Famagusta, Cyprus. Available 24/7 for all your transportation needs.",
     "url": "https://jettaxi.com",
     "telephone": "+905338806808",

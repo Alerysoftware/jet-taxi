@@ -21,7 +21,7 @@ const translations = {
     "header.bookNow": "Rezervasyon",
 
     // Hero Section
-    "hero.title": "JET TAXI",
+    "hero.title": "ELIT TAXI",
     "hero.phone": "0533 880 68 08",
     "hero.location": "İskele, Gazimağusa",
     "hero.licensePlate": "Plaka: TMZ 432",
@@ -59,7 +59,7 @@ const translations = {
     "reviews.enterName": "Adınızı girin",
     "reviews.rating": "Değerlendirme",
     "reviews.yourComment": "Yorumunuz",
-    "reviews.commentPlaceholder": "Jet Taxi ile deneyiminizi paylaşın...",
+    "reviews.commentPlaceholder": "Elit Taxi ile deneyiminizi paylaşın...",
     "reviews.submit": "Yorum Gönder",
 
     // Reviews Page
@@ -68,7 +68,7 @@ const translations = {
     "reviewsPage.averageRating": "Ortalama Puan",
     "reviewsPage.happyCustomers": "Mutlu Müşteri",
     "reviewsPage.serviceHours": "Hizmet Saati",
-    "reviewsPage.tryJetTaxi": "Siz de Jet Taxi'yi Deneyin!",
+    "reviewsPage.tryJetTaxi": "Siz de Elit Taxi'yi Deneyin!",
     "reviewsPage.experienceService": "Profesyonel hizmetimizi deneyimleyin ve yorumunuzu paylaşın",
     "reviewsPage.bookNow": "Hemen Rezervasyon Yap",
 
@@ -133,7 +133,7 @@ const translations = {
 
     // Contact Page
     "contact.title": "İletişim",
-    "contact.subtitle": "Tüm ulaşım ihtiyaçlarınız için Jet Taxi ile iletişime geçin",
+    "contact.subtitle": "Tüm ulaşım ihtiyaçlarınız için Elit Taxi ile iletişime geçin",
     "contact.backToHome": "Ana Sayfaya Dön",
     "contact.methods": "İletişim Yöntemleri",
     "contact.whatsapp": "WhatsApp",
@@ -170,7 +170,7 @@ const translations = {
     "footer.services": "Hizmetler",
     "footer.contact": "İletişim",
     "footer.contactUs": "İletişim",
-    "footer.copyright": "Jet Taxi. Tüm hakları saklıdır. | Tasarım: Mine Çolak",
+    "footer.copyright": "Elit Taxi. Tüm hakları saklıdır. | Tasarım: Mine Çolak",
 
     // Common
     "common.phone": "0533 880 68 08",
@@ -185,7 +185,7 @@ const translations = {
     "header.bookNow": "Book Now",
 
     // Hero Section
-    "hero.title": "JET TAXI",
+    "hero.title": "ELITE TAXI",
     "hero.phone": "0533 880 68 08",
     "hero.location": "İskele, Famagusta",
     "hero.licensePlate": "License Plate: TMZ 432",
@@ -223,7 +223,7 @@ const translations = {
     "reviews.enterName": "Enter your name",
     "reviews.rating": "Rating",
     "reviews.yourComment": "Your Comment",
-    "reviews.commentPlaceholder": "Share your experience with Jet Taxi...",
+    "reviews.commentPlaceholder": "Share your experience with Elite Taxi...",
     "reviews.submit": "Submit Comment",
 
     // Reviews Page
@@ -232,7 +232,7 @@ const translations = {
     "reviewsPage.averageRating": "Average Rating",
     "reviewsPage.happyCustomers": "Happy Customers",
     "reviewsPage.serviceHours": "Service Hours",
-    "reviewsPage.tryJetTaxi": "Try Jet Taxi Too!",
+    "reviewsPage.tryJetTaxi": "Try Elite Taxi Too!",
     "reviewsPage.experienceService": "Experience our professional service and share your review",
     "reviewsPage.bookNow": "Book Now",
 
@@ -298,7 +298,7 @@ const translations = {
 
     // Contact Page
     "contact.title": "Contact Us",
-    "contact.subtitle": "Get in touch with Jet Taxi for all your transportation needs",
+    "contact.subtitle": "Get in touch with Elite Taxi for all your transportation needs",
     "contact.backToHome": "Back to Home",
     "contact.methods": "Contact Methods",
     "contact.whatsapp": "WhatsApp",
@@ -335,7 +335,7 @@ const translations = {
     "footer.services": "Services",
     "footer.contact": "Contact",
     "footer.contactUs": "Contact Us",
-    "footer.copyright": "Jet Taxi. All rights reserved. | Design by Mine Colak",
+    "footer.copyright": "Elite Taxi. All rights reserved. | Design by Mine Colak",
 
     // Common
     "common.phone": "0533 880 68 08",
@@ -350,7 +350,7 @@ const translations = {
     "header.bookNow": "Заказать",
 
     // Hero Section
-    "hero.title": "JET TAXI",
+    "hero.title": "ELITE TAXI",
     "hero.phone": "0533 880 68 08",
     "hero.location": "Искеле, Фамагуста",
     "hero.licensePlate": "Номер: TMZ 432",
@@ -388,7 +388,7 @@ const translations = {
     "reviews.enterName": "Введите ваше имя",
     "reviews.rating": "Рейтинг",
     "reviews.yourComment": "Ваш Комментарий",
-    "reviews.commentPlaceholder": "Поделитесь своим опытом с Jet Taxi...",
+    "reviews.commentPlaceholder": "Поделитесь своим опытом с Elite Taxi...",
     "reviews.submit": "Отправить Комментарий",
 
     // Reviews Page
@@ -397,7 +397,7 @@ const translations = {
     "reviewsPage.averageRating": "Средний Рейтинг",
     "reviewsPage.happyCustomers": "Довольных Клиентов",
     "reviewsPage.serviceHours": "Часы Работы",
-    "reviewsPage.tryJetTaxi": "Попробуйте Jet Taxi Тоже!",
+    "reviewsPage.tryJetTaxi": "Попробуйте Elite Taxi Тоже!",
     "reviewsPage.experienceService": "Испытайте наш профессиональный сервис и поделитесь отзывом",
     "reviewsPage.bookNow": "Заказать Сейчас",
 
@@ -463,7 +463,7 @@ const translations = {
 
     // Contact Page
     "contact.title": "Связаться с Нами",
-    "contact.subtitle": "Свяжитесь с Jet Taxi для всех ваших транспортных потребностей",
+    "contact.subtitle": "Свяжитесь с Elite Taxi для всех ваших транспортных потребностей",
     "contact.backToHome": "Назад на Главную",
     "contact.methods": "Способы Связи",
     "contact.whatsapp": "WhatsApp",
@@ -501,7 +501,7 @@ const translations = {
     "footer.services": "Услуги",
     "footer.contact": "Контакты",
     "footer.contactUs": "Связаться с Нами",
-    "footer.copyright": "Jet Taxi. Все права защищены. | Дизайн: Mine Colak",
+    "footer.copyright": "Elite Taxi. Все права защищены. | Дизайн: Mine Colak",
 
     // Common
     "common.phone": "0533 880 68 08",
@@ -516,7 +516,7 @@ const translations = {
     "header.bookNow": "Κράτηση",
 
     // Hero Section
-    "hero.title": "JET TAXI",
+    "hero.title": "ELITE TAXI",
     "hero.phone": "0533 880 68 08",
     "hero.location": "Ίσκελε, Αμμόχωστος",
     "hero.licensePlate": "Πινακίδα: TMZ 432",
@@ -554,7 +554,7 @@ const translations = {
     "reviews.enterName": "Εισάγετε το όνομά σας",
     "reviews.rating": "Αξιολόγηση",
     "reviews.yourComment": "Το Σχόλιό σας",
-    "reviews.commentPlaceholder": "Μοιραστείτε την εμπειρία σας με το Jet Taxi...",
+    "reviews.commentPlaceholder": "Μοιραστείτε την εμπειρία σας με το Elite Taxi...",
     "reviews.submit": "Υποβολή Σχολίου",
 
     // Reviews Page
@@ -563,7 +563,7 @@ const translations = {
     "reviewsPage.averageRating": "Μέσος Όρος Αξιολόγησης",
     "reviewsPage.happyCustomers": "Ευχαριστημένοι Πελάτες",
     "reviewsPage.serviceHours": "Ώρες Υπηρεσίας",
-    "reviewsPage.tryJetTaxi": "Δοκιμάστε και εσείς το Jet Taxi!",
+    "reviewsPage.tryJetTaxi": "Δοκιμάστε και εσείς το Elite Taxi!",
     "reviewsPage.experienceService": "Απολαύστε την επαγγελματική μας υπηρεσία και μοιραστείτε την κριτική σας",
     "reviewsPage.bookNow": "Κράτηση Τώρα",
 
@@ -629,7 +629,7 @@ const translations = {
 
     // Contact Page
     "contact.title": "Επικοινωνήστε μαζί μας",
-    "contact.subtitle": "Επικοινωνήστε με το Jet Taxi για όλες τις μεταφορικές σας ανάγκες",
+    "contact.subtitle": "Επικοινωνήστε με το Elite Taxi για όλες τις μεταφορικές σας ανάγκες",
     "contact.backToHome": "Επιστροφή στην Αρχική",
     "contact.methods": "Μέθοδοι Επικοινωνίας",
     "contact.whatsapp": "WhatsApp",
@@ -667,7 +667,7 @@ const translations = {
     "footer.services": "Υπηρεσίες",
     "footer.contact": "Επικοινωνία",
     "footer.contactUs": "Επικοινωνήστε μαζί μας",
-    "footer.copyright": "Jet Taxi. Όλα τα δικαιώματα διατηρούνται. | Σχεδιασμός: Mine Colak",
+    "footer.copyright": "Elite Taxi. Όλα τα δικαιώματα διατηρούνται. | Σχεδιασμός: Mine Colak",
 
     // Common
     "common.phone": "0533 880 68 08",
@@ -681,7 +681,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>("tr") // Default to Turkish
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("jet-taxi-language") as Language
+    const savedLanguage = localStorage.getItem("Elite-taxi-language") as Language
     if (savedLanguage && ["tr", "en", "ru", "el"].includes(savedLanguage)) {
       setLanguage(savedLanguage)
     }
@@ -689,11 +689,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const handleSetLanguage = (lang: Language) => {
     setLanguage(lang)
-    localStorage.setItem("jet-taxi-language", lang)
+    localStorage.setItem("Elite-taxi-language", lang)
   }
 
   const t = (key: string): string => {
-    return translations[language][key] || key
+    return (translations[language] as Record<string, string>)[key] || key
   }
 
   return (

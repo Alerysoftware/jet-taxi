@@ -18,25 +18,29 @@ export default function VipTaxiSection() {
       id: 1,
       src: "/images/vito-front-angle.jpg",
       alt: "Mercedes Vito VIP - Front Angle View",
-      title: "Mercedes Vito VIP - Profesyonel Görünüm",
+      caption: "Mercedes Vito VIP - Profesyonel Görünüm",
+      category: "VIP Taxi"
     },
     {
       id: 2,
       src: "/images/vito-front-side.jpg",
       alt: "Mercedes Vito VIP - Front Side View",
-      title: "Mercedes Vito VIP - Şık Tasarım",
+      caption: "Mercedes Vito VIP - Şık Tasarım",
+      category: "VIP Taxi"
     },
     {
       id: 3,
       src: "/images/vito-residential.jpg",
       alt: "Mercedes Vito VIP - Residential Area",
-      title: "Mercedes Vito VIP - Şehir İçi Hizmet",
+      caption: "Mercedes Vito VIP - Şehir İçi Hizmet",
+      category: "VIP Taxi"
     },
     {
       id: 4,
       src: "/images/vito-rear-side.jpg",
       alt: "Mercedes Vito VIP - Rear Side View",
-      title: "Mercedes Vito VIP - Arka Görünüm",
+      caption: "Mercedes Vito VIP - Arka Görünüm",
+      category: "VIP Taxi"
     },
   ]
 
@@ -120,12 +124,14 @@ export default function VipTaxiSection() {
       </div>
 
       {/* Photo Gallery Modal */}
-      <PhotoGalleryModal
-        photos={vitoGallery}
-        isOpen={isGalleryOpen}
-        onClose={() => setIsGalleryOpen(false)}
-        initialPhotoIndex={selectedPhotoIndex}
-      />
+      {isGalleryOpen && (
+        <PhotoGalleryModal
+          images={vitoGallery}
+          isOpen={isGalleryOpen}
+          onClose={() => setIsGalleryOpen(false)}
+          initialIndex={selectedPhotoIndex}
+        />
+      )}
     </div>
   )
 }

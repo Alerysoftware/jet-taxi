@@ -1,0 +1,4 @@
+[33mba557ca[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m  Fix: Replace performance-test with build-test - remove Lighthouse CI issues
+[33mdbe25bf[m  Fix: Remove deploy job temporarily - focus on build and test
+[33m7c75858[m  Fix: GitHub Actions workflow - Add Lighthouse config and improve error handling
+[33mc9519af[m  Initial commit: Jet Taxi website with Next.js 15 - Complete project with all 10 improvements
