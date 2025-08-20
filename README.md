@@ -46,7 +46,7 @@ jet-taxi/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/jet-taxi.git
+   git clone https://github.com/Alerysoftware/jet-taxi.git
    cd jet-taxi
    ```
 

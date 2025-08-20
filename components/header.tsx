@@ -37,12 +37,7 @@ export default function Header() {
             {t("header.services")}
           </Link>
 
-          <Link
-            href="/reviews"
-            className="text-sm font-medium hover:text-yellow-500 transition-colors text-gray-900 dark:text-white"
-          >
-            {t("header.reviews")}
-          </Link>
+          
 
           <Link
             href="/contact"
@@ -99,13 +94,7 @@ export default function Header() {
                 {t("header.services")}
               </Link>
 
-              <Link
-                href="/reviews"
-                className="text-lg font-medium hover:text-yellow-500 transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                {t("header.reviews")}
-              </Link>
+              
 
               <Link
                 href="/contact"
